@@ -130,7 +130,7 @@
             tempo = float(document['tempo'].value)
             valence = float(document['valence'].value)
 
-            url = f'http://127.0.0.1:4000/predict?acousticness={acousticness}&danceability={danceability}&energy={energy}&instrumentalness={instrumentalness}&liveness={liveness}&speechiness={speechiness}&tempo={tempo}&valence={valence}'
+            url = f'https://kivymlapp.herokuapp.com/predict?acousticness={acousticness}&danceability={danceability}&energy={energy}&instrumentalness={instrumentalness}&liveness={liveness}&speechiness={speechiness}&tempo={tempo}&valence={valence}'
             req.open('GET', url, True)
             req.bind('complete', on_complete)
             document['result'].text = 'Loading...'
